@@ -4,8 +4,8 @@ Content-Type: application/json
 
 {
   "name": "John Doe",
-  "email": "johndoe@email.com",
-  "password": "senha"
+  "email": "jondoe@fulano.com",
+  "password": "teste"
 }
 
 ###
@@ -13,6 +13,11 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email": "johndoe@email.com",
-  "password": "senha"
+  "email": "jondoe@fulano.com",
+  "password": "teste"
   }
+
+###
+GET http://localhost:3000/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6IkpvaG4gRG9lIiwiZW1haWwiOiJqb2huZG9lQGVtYWlsLmNvbSIsImlhdCI6MTc0MjA1NjMxNCwiZXhwIjoxNzQyMDU2Mzc0fQ.2_KlmxsnPm3MsioGrNklsaqTwwy9uT_TGbcwGFeqzxk
+Content-Type: application/json

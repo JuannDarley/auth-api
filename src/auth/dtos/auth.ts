@@ -1,10 +1,21 @@
-export interface SignupDto {
-  name: string;
-  email: string;
-  password: string;
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import { IsEmail, IsNotEmpty } from 'class-validator'
+
+export class SignupDto {
+	@IsNotEmpty()
+	name: string
+
+	@IsEmail()
+	email: string
+
+	@IsNotEmpty()
+	password: string
 }
 
-export interface SigninDto {
-  email: string;
-  password: string;
+export class SigninDto {
+	@IsEmail()
+	email: string
+
+	@IsNotEmpty()
+	password: string
 }
